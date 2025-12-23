@@ -86,6 +86,11 @@ app.get('/', (req, res) => res.sendFile('index.html', { root: 'public' }));
 app.get('/about.html', (req, res) => res.sendFile('about.html', { root: 'public' }));
 app.get('/app.html', (req, res) => res.sendFile('app.html', { root: 'public' }));
 
-app.listen(PORT, () => {
-  console.log(`Server listening on http://localhost:${PORT}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Server listening on http://localhost:${PORT}`);
+  });
+}
+
+export default app;
+
