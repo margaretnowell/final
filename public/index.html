@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DailyVibes | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Swiper CSS (JS library #2) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <h1 class="logo">DailyVibes</h1>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/app.html">Log Vibes</a>
+    </nav>
+  </header>
+
+  <main class="page page-home">
+    <section class="hero">
+      <h2 class="hero-title">Track your vibes. Spot your patterns.</h2>
+      <p class="hero-subtitle">
+        DailyVibes lets you quickly log how your day feels and visualize trends over time.
+      </p>
+      <a class="btn primary-btn" href="/app.html">Start Logging</a>
+    </section>
+
+    <section class="slider-section">
+      <h3>Vibe Tips</h3>
+      <!-- Swiper -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide tip-card">Take a 5-minute walk between tasks.</div>
+          <div class="swiper-slide tip-card">Drink some water and stretch your neck.</div>
+          <div class="swiper-slide tip-card">Write down 1 win from today.</div>
+          <div class="swiper-slide tip-card">Send a kind message to a friend.</div>
+        </div>
+        <!-- Pagination & navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 DailyVibes</p>
+  </footer>
+
+  <!-- React + ReactDOM + Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- React app -->
+  <div id="root-home"></div>
+  <script type="text/babel" src="/app.js"></script>
+</body>
+</html>
